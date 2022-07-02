@@ -1,0 +1,497 @@
+// css button, title, icon, elements...
+img {
+    max-width: 100%;
+    height: auto;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    display: block;
+    outline: 0;
+    &.--center {
+        margin: 0 auto;
+        display: block;
+    }
+}
+a {
+    text-decoration: none;
+    outline: 0;
+    color: $second-cl;
+    &.--hover-link {
+        @include transition($t);
+        &:hover {
+            color: $main-cl;
+        }
+    }
+}
+strong {
+    font-family: nb;
+}
+
+sup {
+    vertical-align: super;
+    font-size: var(--body14-fs);
+    line-height: var(--body14-lh);
+}
+sub {
+    vertical-align: sub;
+    font-size: var(--body14-fs);
+    line-height: var(--body14-lh);
+}
+
+.cursor {
+    @include size(10px);
+    position: absolute;
+    z-index: 300;
+    pointer-events: none;
+    mix-blend-mode: difference;
+    &__inner {
+        @include size(100%);
+        mix-blend-mode: difference;
+        background: $white100-cl;
+        border-radius: 50%;
+        @include transform(scale(1));
+        @include transition(0.3s $cubic);
+    }
+    &.active {
+        .cursor__inner {
+            @include transform(scale(10));
+        }
+    }
+    @include sm{
+        display: none !important;
+    }
+}
+
+//================================== COLOR ===========================//
+.--text-white-cl {
+    color: $white100-cl;
+}
+.--text-black-cl {
+    color: $second-cl;
+}
+.--text-main-cl {
+    color: $main-cl;
+}
+
+//================================== HEADING ===========================//
+.heading {
+    display: block;
+    font-family: mb;
+    color: $second-cl;
+    text-transform: capitalize;
+    &.--h1 {
+        font-size: var(--h1-fs);
+        line-height: var(--h1-lh);
+        letter-spacing: var(--h1-ls);
+        margin-bottom: 40px;
+        overflow: hidden;
+    }
+    &.--h2 {
+        font-size: var(--h2-fs);
+        line-height: var(--h2-lh);
+        letter-spacing: var(--h2-ls);
+        overflow: hidden;
+        &.--mb {
+            margin-bottom: 28px;
+        }
+    }
+    &.--h3 {
+        font-size: var(--h3-fs);
+        line-height: var(--h3-lh);
+        letter-spacing: var(--h3-ls);
+        &.--mb {
+            margin-bottom: 24px;
+        }
+    }
+    &.--h4 {
+        font-size: var(--h4-fs);
+        line-height: var(--h4-lh);
+        letter-spacing: var(--h4-ls);
+        &.--mb {
+            margin-bottom: 22px;
+        }
+    }
+    &.--h5 {
+        font-size: var(--h5-fs);
+        line-height: var(--h5-lh);
+        &.--mb {
+            margin-bottom: 20px;
+        }
+    }
+    .dot {
+        color: $main-cl;
+        display: none !important;
+        &.--white {
+            color: $white100-cl;
+        }
+    }
+    &.--white-cl {
+        color: $white100-cl;
+    }
+    &.--lowercase {
+        text-transform: none;
+    }
+    .words {
+        display: flex;
+        overflow: hidden;
+        span {
+            display: block;
+            @include transition($t $cubic);
+        }
+    }
+
+    @include keyframes(slideY) {
+        0% {
+            -webkit-transform: translateY(-130%);
+            transform: translateY(-130%);
+        }
+
+        100% {
+            -webkit-transform: translateY(0);
+            transform: translateY(0);
+        }
+    }
+
+    &.animated {
+        .words {
+            span {
+                @include animation(slideY 1.2s $cubic);
+            }
+        }
+    }
+
+    @include xs {
+        &.--h1 {
+            margin-bottom: 20px;
+        }
+        &.--h2 {
+            &.--mb {
+                margin-bottom: 18px;
+            }
+        }
+        &.--h3 {
+            &.--mb {
+                margin-bottom: 15px;
+            }
+        }
+        &.--h4 {
+            &.--mb {
+                margin-bottom: 15px;
+            }
+        }
+    }
+}
+
+.bodytext {
+    &.--t28 {
+        font-size: var(--body28-fs);
+        line-height: var(--body28-lh);
+    }
+    &.--t24 {
+        font-size: var(--body24-fs);
+        line-height: var(--body24-lh);
+    }
+    &.--t22 {
+        font-size: var(--body22-fs);
+        line-height: var(--body22-lh);
+    }
+    &.--t18 {
+        font-size: var(--body18-fs);
+        line-height: var(--body18-lh);
+    }
+    &.--t16 {
+        font-size: var(--body16-fs);
+        line-height: var(--body16-lh);
+    }
+    &.--t14 {
+        font-size: var(--body14-fs);
+        line-height: var(--body14-lh);
+    }
+    &.--t12 {
+        font-size: var(--body12-fs);
+        line-height: var(--body12-lh);
+    }
+}
+
+/////////////////////////// BUTTON //////////////////////////
+
+.btnmain {
+    width: max-content;
+    height: var(--height-button);
+    font-size: var(--body16-fs);
+    line-height: var(--body16-lh);
+    font-family: nsb;
+    text-transform: uppercase;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 26px;
+    cursor: pointer;
+    background: $main-cl;
+    border-radius: 40px;
+    @include transition($t);
+    .icon {
+        @include size(16px);
+        margin-left: 10px;
+        position: relative;
+        &:after,
+        &::before {
+            content: "";
+            @include size(100%);
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: url(../img/ic_arrow_black.svg) no-repeat center;
+            background-size: contain;
+            opacity: 1;
+            @include transition($t);
+        }
+        &::before {
+            background: url(../img/ic_arrow_white.svg) no-repeat center;
+            background-size: contain;
+            opacity: 0;
+        }
+    }
+    &:hover {
+        background: $second-cl;
+        color: $white100-cl;
+        .icon {
+            &:after {
+                opacity: 0;
+            }
+            &::before {
+                opacity: 1;
+            }
+        }
+    }
+    &.--white {
+        background: $white100-cl;
+        &:hover {
+            background: $second-cl;
+        }
+    }
+    &.--center {
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+    @include xs {
+        font-size: var(--body14-fs);
+        line-height: var(--body14-lh);
+        padding: 0 18px;
+        .icon {
+            @include size(13px);
+            margin-left: 8px;
+        }
+    }
+}
+
+.btncircle {
+    width: max-content;
+    display: flex;
+    align-items: center;
+    position: relative;
+    &:after {
+        content: "";
+        @include size(var(--height-button));
+        position: absolute;
+        top: 0;
+        right: 0;
+        background: $main-cl;
+        border-radius: 40px;
+        z-index: 0;
+        @include transition($t $cubic);
+    }
+    .text {
+        text-transform: uppercase;
+        color: $white100-cl;
+        font-size: var(--body16-fs);
+        line-height: normal;
+        font-family: nsb;
+        position: relative;
+        top: -1px;
+        z-index: 1;
+        @include transition($t);
+        &.--black-cl {
+            color: $second-cl;
+        }
+    }
+    .icon {
+        @include size(var(--height-button));
+        display: block;
+        margin-left: 15px;
+        background: url(../img/btn-right-yellow.svg) no-repeat center;
+        background-size: contain;
+        position: relative;
+        z-index: 1;
+    }
+    &:hover {
+        &:after {
+            width: 100%;
+        }
+        .text {
+            @include transform(translateX(15px));
+            color: $second-cl;
+        }
+    }
+}
+
+.btnround {
+    @include size(var(--height-button));
+    border-radius: 50%;
+    background: $main-cl;
+    @include mid(flex);
+    flex-shrink: 0;
+    @include transition($t);
+    a {
+        @include size(100%);
+        @include mid(flex);
+    }
+    svg {
+        fill: #000;
+        @include transition($t);
+    }
+    &.--black-cl {
+        background: #000;
+        svg {
+            fill: #fff;
+        }
+    }
+    &.--next {
+        @include transform(rotate(180deg));
+    }
+    &:hover {
+        background: $second-cl;
+        svg {
+            fill: $main-cl;
+        }
+        &.--black-cl {
+            background: $white100-cl;
+            svg {
+                fill: #000;
+            }
+        }
+    }
+    @include xs {
+        svg {
+            width: 19px;
+        }
+    }
+}
+
+.elcircle {
+    --size: 396px;
+    @include size(var(--size));
+    background: $main-cl;
+    border-radius: 50%;
+    position: absolute;
+    top: var(--top);
+    left: var(--left);
+    right: var(--right);
+    z-index: -1;
+    flex-shrink: 0;
+    @include md {
+        --size: 340px;
+    }
+    @include xs {
+        --size: 180px;
+    }
+}
+
+.btnroundmore {
+    @include size(var(--height-button));
+    border-radius: 50%;
+    background: $main-cl;
+    @include mid(flex);
+    @include transition($t);
+    cursor: pointer;
+    flex-shrink: 0;
+    &::before {
+        content: "";
+        width: 12px;
+        height: 2px;
+        background: $second-cl;
+        position: absolute;
+        @include transition($t);
+    }
+    &:after {
+        content: "";
+        width: 2px;
+        height: 12px;
+        background: $second-cl;
+        position: absolute;
+        @include transition($t);
+    }
+    &.active {
+        background: $second-cl;
+        &::after {
+            @include transform(rotate(90deg));
+            background: $main-cl;
+        }
+        &:before {
+            background: $main-cl;
+        }
+    }
+}
+
+.btnback {
+    display: flex;
+    align-items: center;
+    span {
+        margin-left: 15px;
+        text-transform: uppercase;
+        font-family: nsb;
+        font-size: var(--body16-fs);
+    }
+}
+
+.checkbox {
+    width: 100%;
+    position: relative;
+    padding-left: 35px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    display: grid;
+    input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+        &:checked ~ .checkmark {
+            background-color: $main-cl;
+        }
+        &:checked ~ .checkmark:after {
+            display: block;
+        }
+    }
+    .checkmark {
+        height: 25px;
+        width: 25px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-radius: 50%;
+        border: 1px solid $main-cl;
+        @include mid(true);
+        &:after {
+            content: "";
+            width: 12px;
+            height: 12px;
+            background: url(../img/ic_tick.svg) no-repeat center;
+            background-size: contain;
+            display: none;
+        }
+    }
+    &:after {
+        content: "";
+        position: absolute;
+        display: none;
+    }
+}

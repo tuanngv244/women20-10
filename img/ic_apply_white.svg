@@ -1,0 +1,29 @@
+<svg width="84px" height="78px" viewBox="0 0 84 78" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>F34D876F-D8DC-405A-9629-358B8F482498</title>
+    <g id="Design-System" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Components" transform="translate(-1025.000000, -1045.000000)">
+            <g id="Group-4" transform="translate(0.000000, 711.500000)">
+                <g id="Group-14" transform="translate(738.000000, 209.000000)">
+                    <g id="Group-23" transform="translate(288.000000, 125.500000)">
+                        <path d="M66.3797468,45.4218295 L66.3797468,70.6478873 C66.3797468,73.6037775 64.0396505,76 61.152995,76 L5.22675171,76 C2.34009645,76 0,73.6037775 0,70.6478873 L0,5.35211269 C0,2.39622247 2.34009645,0 5.22675171,0 L61.152995,0 C64.0396505,0 66.3797468,2.39622247 66.3797468,5.35211269 L66.3797468,25.1653607 L66.3797468,25.1653607" id="Path" stroke="#FFFFFF" stroke-linecap="round"></path>
+                        <polygon id="Path-2" stroke="#FFFFFF" fill="#FFD450" fill-rule="nonzero" stroke-linecap="round" points="50.0253165 71.1898734 50.0253165 66.3797468 53.8734177 68.1810533"></polygon>
+                        <g id="Group-3" stroke-linecap="round" transform="translate(63.498220, 40.639112) rotate(25.000000) translate(-63.498220, -40.639112) translate(59.277687, 6.961541)" stroke="#FFFFFF">
+                            <polygon id="Rectangle" fill="#FFD450" fill-rule="nonzero" points="0 1.6056338 8.44106518 1.6056338 8.44106518 57.802817 4.22053257 67.3551411 0 57.802817"></polygon>
+                            <line x1="3.00042657" y1="0" x2="3.16539944" y2="21.943662" id="Path-18"></line>
+                        </g>
+                        <line x1="0" y1="16.3563291" x2="66.3797468" y2="16.3563291" id="Path-16" stroke="#FFFFFF"></line>
+                        <line x1="12.5063291" y1="8.66012658" x2="22.1265823" y2="8.66012658" id="Path-17" stroke="#FFFFFF" stroke-linecap="round"></line>
+                        <line x1="26.9367089" y1="8.64062548" x2="56.7594937" y2="8.67962769" id="Path-17-Copy" stroke="#FFFFFF" stroke-linecap="round"></line>
+                        <rect id="Rectangle" stroke="#FFFFFF" fill="#FFD450" fill-rule="nonzero" stroke-linecap="round" x="9.62025316" y="24.0506329" width="14.4303797" height="14.4303797" rx="4"></rect>
+                        <line x1="9.62025316" y1="47.1589321" x2="50.0253165" y2="47.1233464" id="Path-17-Copy-3" stroke="#FFFFFF" stroke-linecap="round"></line>
+                        <line x1="29.8227848" y1="25.9890136" x2="49.0632911" y2="25.964151" id="Path-17-Copy-7" stroke="#FFFFFF" stroke-linecap="round"></line>
+                        <line x1="29.8227848" y1="30.7991402" x2="49.0632911" y2="30.7742775" id="Path-17-Copy-8" stroke="#FFFFFF" stroke-linecap="round"></line>
+                        <line x1="9.62025316" y1="54.8551346" x2="40.4050633" y2="54.8195489" id="Path-17-Copy-4" stroke="#FFFFFF" stroke-linecap="round"></line>
+                        <line x1="9.62025316" y1="61.5893118" x2="31.7468354" y2="61.5537261" id="Path-17-Copy-5" stroke="#FFFFFF" stroke-linecap="round"></line>
+                        <line x1="9.62025316" y1="68.2861951" x2="45.2151899" y2="68.3251973" id="Path-17-Copy-6" stroke="#FFD450" stroke-linecap="round"></line>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

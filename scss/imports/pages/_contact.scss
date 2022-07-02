@@ -1,0 +1,77 @@
+.contact {
+    &__inner {
+        max-width: 1024px;
+        margin: auto;
+    }
+    .form {
+        &__group {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px var(--gap);
+        }
+        .field {
+            margin-bottom: 28px;
+        }
+        &__bottom {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 50px;
+            .checkboxwrap {
+                width: 100%;
+                max-width: 540px;
+                padding-right: 40px;
+            }
+            .btnsubmit {
+                align-self: flex-start;
+            }
+        }
+    }
+    @include sm {
+        .form {
+            &__group {
+                grid-template-columns: 1fr;
+            }
+            .field {
+                margin-bottom: 14px;
+            }
+            &__bottom {
+                flex-direction: column;
+                margin-top: 30px;
+                .checkboxwrap {
+                    padding-right: 0px;
+                }
+                .btnsubmit {
+                    margin-top: 30px;
+                }
+            }
+        }
+    }
+}
+
+.contactsuccess {
+    &__inner {
+        border-radius: 28px;
+        background: $second-cl;
+        padding: 100px 60px;
+        @include mid(true);
+        text-align: center;
+    }
+    .tick {
+        margin: auto;
+        @include size(var(--height-button));
+        border-radius: 50%;
+        background: $white100-cl;
+        flex-shrink: 0;
+        @include mid(true);
+        margin-bottom: 20px;
+    }
+    .desc {
+        color: $white100-cl;
+        margin: 10px 0 50px 0;
+    }
+    @include xs {
+        &__inner {
+            padding: 60px var(--gap);
+        }
+    }
+}

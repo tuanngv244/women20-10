@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="43px" height="43px" viewBox="0 0 43 43" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>8ED7C238-B221-439E-8A3A-13D491A27E15</title>
+    <defs>
+        <polygon id="path-1" points="8 0 6.59 1.41 12.17 7 0 7 0 9 12.17 9 6.59 14.59 8 16 16 8"></polygon>
+        <rect id="path-3" x="0" y="0" width="50" height="50"></rect>
+    </defs>
+    <g id="Homepage" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Homepage-Yellow" transform="translate(-1214.000000, -3103.000000)">
+            <g id="Group-13" transform="translate(60.000000, 2886.000000)">
+                <g id="Group-3-Copy" transform="translate(1175.500000, 238.500000) scale(-1, 1) translate(-1175.500000, -238.500000) translate(1154.000000, 217.000000)">
+                    <circle id="Oval-Copy" fill="#FFD450" cx="21.5" cy="21.5" r="21.5"></circle>
+                    <g id="ic_arrow_forward-copy" transform="translate(13.500000, 14.000000)">
+                        <mask id="mask-2" fill="white">
+                            <use xlink:href="#path-1"></use>
+                        </mask>
+                        <g id="Mask"></g>
+                        <g id="Group" mask="url(#mask-2)">
+                            <g transform="translate(-17.000000, -17.000000)">
+                                <mask id="mask-4" fill="white">
+                                    <use xlink:href="#path-3"></use>
+                                </mask>
+                                <use id="Black" fill="#000000" xlink:href="#path-3"></use>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,42 @@
+.policy {
+    &__inner {
+        display: grid;
+        grid-template-columns: 1fr 380px;
+        gap: 60px;
+    }
+
+    &__nav {
+        position: sticky;
+        position: -webkit-sticky;
+        top: 100px;
+        a {
+            display: block;
+            padding: 6px 0;
+            @include transition($t);
+            &:hover {
+                opacity: 0.7;
+            }
+        }
+    }
+    @include md {
+        &__inner {
+            grid-template-columns: 1fr 280px;
+        }
+    }
+    @include sm {
+        &__inner {
+            grid-template-columns: 1fr;
+        }
+        &__content {
+            order: 2;
+        }
+        &__nav {
+            order: 1;
+        }
+    }
+    @include xs {
+        &__inner {
+            gap: 30px;
+        }
+    }
+}

@@ -1,0 +1,152 @@
+:root {
+    // fontsize text
+
+    --h1-fs: 11.5rem;
+    --h1-lh: 13rem;
+    --h1-ls: -0.1rem;
+
+    --h2-fs: 9rem;
+    --h2-lh: 10.1rem;
+    --h2-ls: -0.03rem;
+
+    --h3-fs: 5.8rem;
+    --h3-lh: 6.6rem;
+    --h3-ls: -0.02rem;
+
+    --h4-fs: 4.4rem;
+    --h4-lh: 5.2rem;
+    --h4-ls: 0rem;
+
+    --h5-fs: 2.4rem;
+    --h5-lh: 3rem;
+
+    --body28-fs: 2.8rem;
+    --body28-lh: 4.2rem;
+
+    --body24-fs: 2.4rem;
+    --body24-lh: 3rem;
+
+    --body22-fs: 2.2rem;
+    --body22-lh: 3.4rem;
+
+    --body18-fs: 1.8rem;
+    --body18-lh: 2.8rem;
+
+    --body16-fs: 1.6rem;
+    --body16-lh: 2.5rem;
+
+    --body14-fs: 1.4rem;
+    --body14-lh: 2.1rem;
+
+    --body12-fs: 1.2rem;
+    --body12-lh: 1.6rem;
+
+    // variable
+    --height-header: 100px;
+    --height-button: 42px;
+    --ptop: 150px;
+    --pd-section: 100px;
+    --gap: 30px;
+
+    @media (max-width: 1560px) {
+        --h1-fs: 9.6rem;
+        --h1-lh: 10.8rem;
+
+        --h2-fs: 8.2rem;
+        --h2-lh: 9.3rem;
+
+        --h3-fs: 4.6rem;
+        --h3-lh: 5.2rem;
+
+        --h4-fs: 4rem;
+        --h4-lh: 4.8rem;
+    }
+    @media (max-width: 1024px) {
+        --height-header: 100px;
+        --pd-section: 70px;
+        --ptop: 120px;
+    }
+    @media (max-width: 992px) {
+        --h1-fs: 8rem;
+        --h1-lh: 8.8rem;
+
+        --h2-fs: 7.2rem;
+        --h2-lh: 8rem;
+
+        --h3-fs: 4.4rem;
+        --h3-lh: 5rem;
+
+        --h4-fs: 3.8rem;
+        --h4-lh: 4.4rem;
+    }
+
+    @media (max-width: 767px) {
+        --h1-fs: 5.4rem;
+        --h1-lh: 5.9rem;
+
+        --h2-fs: 5.2rem;
+        --h2-lh: 6rem;
+
+        --h3-fs: 3.6rem;
+        --h3-lh: 4.2rem;
+
+        --h4-fs: 3rem;
+        --h4-lh: 3.8rem;
+
+        --h5-fs: 2.3rem;
+        --h5-lh: 2.8rem;
+
+        --body28-fs: 2rem;
+        --body28-lh: 3.2rem;
+
+        --body24-fs: 1.8rem;
+        --body24-lh: 2.6rem;
+
+        --body22-fs: 1.6rem;
+        --body22-lh: 2.5rem;
+
+        --body18-fs: 1.6rem;
+        --body18-lh: 2.5rem;
+
+        --height-header: 80px;
+        --height-button: 38px;
+        --pd-section: 60px;
+        --gap: 18px;
+    }
+}
+
+/*primary colors*/
+$main-cl: #ffd450;
+$second-cl: #0d121d;
+$blue-cl: #e6ecf5;
+$blue-dark-cl: #2b385a;
+$white100-cl: #fff;
+$black100-cl: #000;
+$black97-cl: #979797;
+// timing transition
+$t: 0.4s;
+$cubic: cubic-bezier(0.59, 0.29, 0.15, 0.93);
+
+/*font families*/
+$font-stack: "Open Sans", sans-serif;
+$font-main: nr;
+
+//============================================================//
+
+/*BOXED LAYOUT*/
+$container-max-width: 100%;
+$container-fluid-max-width: 2500px;
+$container-width: 1380px;
+
+/*GRID - media queries breakpoints*/
+$xxs-min: 400px;
+$xs-min: 768px;
+$sm-min: 992px;
+$md-min: 1200px;
+$lg-min: 1600px;
+
+$xxs-max: ($xxs-min - 1); // Small Mobile
+$xs-max: ($xs-min - 1); // Mobile
+$sm-max: ($sm-min - 1); // Tablet
+$md-max: ($md-min - 1); // Desktop
+$lg-max: ($lg-min - 1); // Large Desktop

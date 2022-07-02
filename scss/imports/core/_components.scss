@@ -1,0 +1,558 @@
+//==================== CONTENT DETAIL =================//
+
+// CSS này dành cho phần chi tiết của bài viết tin tức.
+.contentdetail {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: mb;
+        display: block;
+    }
+    h1 {
+        font-size: var(--h1-fs);
+        line-height: var(--h1-lh);
+        margin: 0 0 0.67rem 0;
+    }
+    h2 {
+        font-size: var(--h3-fs);
+        line-height: var(--h3-lh);
+        margin: 0 0 2rem 0;
+    }
+    h3 {
+        font-size: var(--h4-fs);
+        line-height: var(--h4-lh);
+        margin: 0 0 0.83rem 0;
+    }
+    h4 {
+        font-size: 4rem;
+        line-height: 5.2rem;
+        margin: 0 0 1.12rem 0;
+    }
+    h5 {
+        font-size: 3.4rem;
+        line-height: var(--h5-lh);
+        margin: 0 0 1.5rem 0;
+    }
+    h6 {
+        font-size: 2.4rem;
+        margin: 0 0 1.67rem 0;
+    }
+
+    p {
+        margin: 0 0 2.12rem 0;
+    }
+    a {
+        color: #326aff;
+        @include transition($t);
+        &:hover {
+            opacity: 0.6;
+        }
+    }
+    ol,
+    ul {
+        list-style: initial;
+        padding-left: 40px;
+        li {
+            padding: 5px 0;
+        }
+    }
+    img {
+        display: block;
+        height: auto;
+        overflow: hidden;
+        margin: 45px auto;
+    }
+    .thumbnail {
+        img {
+            margin-top: 0;
+        }
+    }
+    .img {
+        em {
+            margin: -35px auto 50px auto;
+            display: table;
+            text-align: center;
+            font-size: var(--body16-fs);
+            line-height: var(--body16-lh);
+            font-style: italic;
+        }
+    }
+    .video {
+        width: 100%;
+        height: 0;
+        padding-bottom: 56.25%;
+        position: relative;
+        margin: 25px auto;
+        iframe,
+        video {
+            position: absolute;
+            @include size(100%);
+            top: 0;
+            left: 0;
+        }
+    }
+    &.--casedetail {
+        .thumbnail {
+            img {
+                max-width: 360px;
+                max-height: 80px;
+                object-fit: contain;
+                margin-left: 0;
+            }
+        }
+    }
+    @include sm {
+        img {
+            margin: 25px auto;
+        }
+        .img {
+            em {
+                margin: -15px auto 25px auto;
+                display: table;
+                text-align: center;
+                font-size: var(--body16-fs);
+                line-height: var(--body16-lh);
+                font-style: italic;
+            }
+        }
+    }
+}
+
+.cardmain {
+    max-width: max-content;
+    position: relative;
+    &__inner {
+        width: 400px;
+        border-radius: 20px;
+        background: $white100-cl;
+        padding: 30px;
+        display: block;
+        position: relative;
+        z-index: 1;
+        @include transition($t $cubic);
+    }
+    &:after {
+        content: "";
+        @include size(100%);
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 0;
+        background: $second-cl;
+        border-radius: 20px;
+    }
+    &__title {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    &__text {
+        width: 100%;
+        min-height: 55px;
+        margin-bottom: 5px;
+    }
+    &__bottom {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        .icon {
+            img {
+                width: 80px;
+            }
+        }
+    }
+
+    &.--black-cl {
+        .cardmain__inner {
+            background: $second-cl;
+            border: 1px solid $white100-cl;
+        }
+        &:after {
+            background: $main-cl;
+        }
+    }
+    &:hover {
+        .cardmain__inner {
+            @include transform(translate(10px, -10px));
+        }
+    }
+    &.--big {
+        .cardmain__inner {
+            width: 100%;
+            height: 100%;
+            padding: 40px;
+            border: 2px solid $second-cl;
+        }
+        .cardmain__title {
+            @include overtext(1);
+        }
+        .cardmain__text {
+            height: 65px;
+            margin-bottom: 10px;
+            @include overtext(2);
+        }
+        .cardmain__bottom {
+            margin-top: 30px;
+        }
+    }
+    @include md {
+        &.--big {
+            .cardmain__title {
+                height: 54px;
+                @include overtext(2);
+            }
+        }
+    }
+    @include sm {
+        &.--big {
+            width: 100%;
+            max-width: initial;
+            .cardmain__title {
+                height: auto;
+                min-height: auto;
+                -webkit-line-clamp: initial;
+                -webkit-box-orient: initial;
+                text-overflow: initial;
+                overflow: initial;
+            }
+            .cardmain__text {
+                height: auto;
+                min-height: auto;
+                -webkit-line-clamp: initial;
+                -webkit-box-orient: initial;
+                text-overflow: initial;
+                overflow: initial;
+                margin-bottom: 30px;
+                display: block;
+            }
+        }
+    }
+    @include xs {
+        width: 100%;
+        max-width: initial;
+        &__inner {
+            width: 100%;
+            padding: 20px;
+        }
+        &__bottom {
+            .icon {
+                img {
+                    width: 60px;
+                }
+            }
+        }
+        &.--big {
+            .cardmain__inner {
+                padding: 24px var(--gap);
+                border: 1px solid $second-cl;
+            }
+            .cardmain__text {
+                min-height: auto;
+            }
+        }
+    }
+}
+
+.tabs {
+    background: $white100-cl;
+    border-radius: 40px;
+    padding: 5px;
+    display: inline-flex;
+    align-items: center;
+    .tab {
+        height: var(--height-button);
+        @include mid(true);
+        background: none;
+        padding: 0 18px;
+        border-radius: 40px;
+        font-size: var(--body16-fs);
+        line-height: var(--body16-lh);
+        font-family: nb;
+        text-transform: uppercase;
+        cursor: pointer;
+        &.active {
+            background: $main-cl;
+        }
+    }
+    @include xs {
+        .tab {
+            padding: 0 15px;
+            font-size: var(--body14-fs);
+            line-height: var(--body14-lh);
+        }
+    }
+}
+
+.tags {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 10px;
+    min-height: 78px;
+    .tag {
+        padding: 3px 10px;
+        white-space: nowrap;
+        font-size: var(--body14-fs);
+        border-radius: 7px;
+        background: $blue-cl;
+        color: $blue-dark-cl;
+        font-family: nb;
+    }
+    &.--white-cl {
+        .tag {
+            background-color: $white100-cl;
+        }
+    }
+}
+
+.herotop {
+    min-height: 560px;
+    background: url(../img/header-banner-top.jpeg), $main-cl;
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    background-size: contain;
+    .container-fluid {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding-top: calc(var(--height-header) + 80px);
+        padding-bottom: var(--pd-section);
+    }
+    &.--newsdetail {
+        min-height: 480px;
+        background: url(../img/bg-hero-news.jpg), $main-cl;
+        background-size: contain;
+        background-position: right;
+        background-repeat: no-repeat;
+        .herotop__textbox {
+            max-width: 1200px;
+        }
+    }
+    &.--herocontact {
+        min-height: initial;
+        background: url(../img/bg-hero-news.jpg), $main-cl;
+        background-size: contain;
+        background-position: right;
+        background-repeat: no-repeat;
+        .herotop__textbox {
+            max-width: 1200px;
+        }
+    }
+    @include maxW(1600px){
+        &.--newsdetail, &.--herocontact {
+            background-size: cover;
+        }
+    }
+    @include xs {
+        min-height: 360px;
+        .container-fluid {
+            padding-top: calc(var(--height-header) + 20px);
+        }
+        &.--newsdetail,
+        &.--herocontact {
+            background-position-x: 50%;
+            min-height: 290px;
+        }
+    }
+}
+
+.field {
+    position: relative;
+    label {
+        font-family: nsb;
+        font-size: var(--body22-fs);
+        line-height: var(--body22-fs);
+        display: inline-block;
+        position: relative;
+        pointer-events: none;
+        @include transform(translateY(35px));
+        @include transition(0.3s);
+    }
+    input,
+    textarea {
+        width: 100%;
+        font-family: nsb;
+        font-size: var(--body22-fs);
+        line-height: var(--body22-fs);
+        border-style: solid;
+        border-width: 0px 0px 2px 0px;
+        border-color: $blue-cl;
+        color: $second-cl;
+        padding: 8px 0;
+        outline: 0;
+        @include transition($t);
+        &:focus {
+            border-color: $main-cl;
+        }
+    }
+    textarea {
+        height: 130px;
+        resize: vertical;
+    }
+    &.active {
+        label {
+            font-size: var(--body14-fs);
+            line-height: var(--body14-fs);
+            @include transform(translateY(6px));
+        }
+    }
+    @include xs {
+        label {
+            @include transform(translateY(32px));
+        }
+    }
+}
+
+.formerror {
+    font-size: var(--body14-fs);
+    line-height: var(--body14-fs);
+    color: red;
+    position: absolute;
+    bottom: -20px;
+    margin: 0 !important;
+}
+
+.newsitem {
+    position: relative;
+    &__inner {
+        border-radius: 18px;
+        position: relative;
+        z-index: 1;
+        background: $white100-cl;
+        overflow: hidden;
+        @include transition($t);
+    }
+    &__img {
+        height: 0;
+        padding-bottom: 50%;
+        position: relative;
+        overflow: hidden;
+        img {
+            @include mid;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            @include transition($t);
+        }
+    }
+    &__content {
+        padding: 25px 20px;
+        .heading {
+            height: 60px;
+            margin-bottom: 30px;
+            @include overtext(2);
+            @include transition($t);
+        }
+    }
+    &:after {
+        content: "";
+        @include size(100%);
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 0;
+        background: $main-cl;
+        border-radius: 20px;
+        z-index: 0;
+    }
+    &:hover {
+        .newsitem__inner {
+            @include transform(translate(10px, -10px));
+        }
+    }
+    &.--caseitem {
+        .newsitem__inner {
+            height: 100%;
+            padding: var(--gap);
+        }
+        .newsitem__logo {
+            width: 100%;
+            height: 140px;
+            @include mid(true);
+            margin-bottom: 10px;
+            img {
+                max-height: 100px;
+            }
+        }
+    }
+    @include md {
+        &__content {
+            .heading {
+                height: 92px;
+                @include overtext(3);
+            }
+        }
+    }
+    @include xs {
+        &__content {
+            .heading {
+                height: auto;
+                @include overtext(initial);
+            }
+        }
+        &.--caseitem {
+            .newsitem__logo {
+                margin-bottom: 0;
+                img {
+                    max-height: 80px;
+                }
+            }
+        }
+    }
+}
+
+.paging {
+    width: max-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 55px auto 0 auto;
+    li {
+        @include size(var(--height-button));
+        color: $white100-cl;
+        font-family: nsb;
+        border-radius: 50%;
+        margin: 0 4px;
+        @include mid(true);
+        a {
+            @include size(100%);
+            border-radius: 50%;
+            flex-shrink: 0;
+            @include mid(true);
+            color: $white100-cl;
+            font-family: nsb;
+            @include transition($t);
+            &:hover {
+                color: $main-cl;
+            }
+        }
+        &:not(:first-child),
+        &:not(:last-child) {
+            &.active {
+                background: $white100-cl;
+            }
+        }
+        &:first-child {
+            margin-right: 10px;
+        }
+        &:last-child {
+            margin-left: 10px;
+        }
+        &.active {
+            background: $white100-cl;
+            a {
+                color: $black100-cl;
+            }
+        }
+    }
+    @include xs {
+        margin: 40px auto 0 auto;
+        li {
+            margin: 0px;
+        }
+    }
+}

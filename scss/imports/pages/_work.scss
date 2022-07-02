@@ -1,0 +1,121 @@
+.benefits {
+    padding-bottom: 200px;
+    --gapCol: 60px;
+    &__inner {
+        border-radius: 28px;
+        background: $second-cl;
+        padding: 90px 60px 0px 60px;
+    }
+    .heading {
+        &.--mb {
+            margin-bottom: 0px;
+        }
+    }
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--gapCol);
+        position: relative;
+        bottom: -60px;
+        .item {
+            background: $white100-cl;
+            border-radius: 17px;
+            padding: 50px 30px 50px 30px;
+            -webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
+            -moz-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
+            box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
+            position: relative;
+            .heading {
+                margin-bottom: 18px;
+            }
+            &:nth-child(2),
+            &:nth-child(4) {
+                top: -225px;
+            }
+        }
+    }
+    @include sm {
+        --gapCol: var(--gap);
+        padding-bottom: 100px;
+        &__inner {
+            border-radius: 28px;
+            background: $second-cl;
+            padding: 60px var(--gap) var(--gap) var(--gap);
+        }
+        .heading {
+            &.--mb {
+                margin-bottom: 30px;
+            }
+        }
+        &__list {
+            grid-template-columns: 1fr;
+            top: 0;
+            .item {
+                &:nth-child(2),
+                &:nth-child(4) {
+                    top: 0;
+                }
+            }
+        }
+    }
+    @include xs {
+        padding-bottom: var(--pd-section);
+        &__inner {
+            padding: 50px var(--gap) var(--gap) var(--gap);
+        }
+        .heading {
+            &.--mb {
+                margin-bottom: 30px;
+            }
+        }
+        &__list {
+            .item {
+                padding: var(--gap);
+                .heading {
+                    margin-bottom: 12px;
+                    br {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.calltoacion {
+    &__inner {
+        min-height: 560px;
+        background: url(../img/header-banner-top.jpeg), $main-cl;
+        background-position: bottom right;
+        background-repeat: no-repeat;
+        background-size: contain;
+        border-radius: 28px;
+        padding: 240px 100px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .heading {
+            text-align: center;
+            .words {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+        .desc {
+            margin: 25px auto 40px auto;
+            text-align: center;
+        }
+    }
+    @include sm {
+        &__inner {
+            padding: 40px 100px;
+        }
+    }
+    @include xs {
+        &__inner {
+            min-height: 360px;
+            padding: 60px 20px;
+        }
+    }
+}

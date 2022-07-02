@@ -1,0 +1,136 @@
+.header {
+    width: $container-max-width;
+    height: var(--height-header);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 110;
+    @include transition($t);
+    &.is-hidden {
+        -webkit-transform: translateY(-100%);
+        -ms-transform: translateY(-100%);
+        transform: translateY(-100%);
+    }
+    .container-fluid {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__logo {
+        @include size(190px, 28px);
+        @include transition($t);
+        position: relative;
+        z-index: 11;
+        img {
+            position: absolute;
+            object-fit: contain;
+            @include transition($t);
+        }
+        &-white {
+            opacity: 1;
+        }
+        &-black {
+            opacity: 0;
+        }
+    }
+    &__right {
+        display: flex;
+    }
+    &__btnmenu {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        margin-left: 35px;
+        .button {
+            @include size(var(--height-button));
+            position: relative;
+            background: $second-cl;
+            border-radius: 50%;
+            z-index: 20;
+            @include transform(scale(1));
+            @include transition($t);
+            span {
+                width: 20px;
+                height: 3px;
+                background: $main-cl;
+                display: block;
+                position: absolute;
+                left: 50%;
+                @include transform(translateX(-50%));
+                @include transition($t);
+                &:nth-child(1) {
+                    top: 15px;
+                }
+                &:nth-child(2) {
+                    bottom: 15px;
+                }
+            }
+        }
+        &-overlay {
+            @include size(30px);
+            background: $second-cl;
+            border-radius: 50%;
+            position: fixed;
+            pointer-events: none;
+            z-index: 1;
+            will-change: transform;
+            @include transition(0.4s ease-in-out);
+        }
+        &:hover {
+            .button {
+                @include transform(scale(1.2));
+                span {
+                    background: $main-cl;
+                }
+            }
+        }
+        &.active {
+            .button {
+                background: $main-cl;
+                span {
+                    background: $second-cl;
+                    &:nth-child(1) {
+                        @include transform(translate(-50%, 5px) rotate(-45deg));
+                    }
+                    &:nth-child(2) {
+                        @include transform(translate(-50%, -4px) rotate(45deg));
+                    }
+                }
+            }
+        }
+    }
+    @include xs {
+        &__logo {
+            @include size(140px, 21px);
+        }
+        &__btnmenu {
+            margin-left: 20px;
+            .button {
+                span {
+                    height: 2px;
+                    &:nth-child(1) {
+                        top: 14px;
+                    }
+                    &:nth-child(2) {
+                        bottom: 14px;
+                    }
+                }
+            }
+            &:hover {
+                .button {
+                    @include transform(scale(1));
+                }
+            }
+            &.active {
+                .button {
+                    span {
+                        &:nth-child(1) {
+                            @include transform(translate(-50%, 4px) rotate(-45deg));
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

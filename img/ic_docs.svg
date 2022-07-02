@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="47px" height="56px" viewBox="0 0 47 56" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>6D700263-8140-47CB-BEDE-20A467D9B2DF</title>
+    <g id="Hire" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linejoin="round">
+        <g id="Hire---Contact-2nd-Step" transform="translate(-1074.000000, -5763.000000)" stroke="#000000">
+            <g id="Group-23" transform="translate(60.000000, 5376.000000)">
+                <g id="Group-2" transform="translate(755.000000, 358.000000)">
+                    <g id="Group" transform="translate(260.000000, 30.000000)">
+                        <path d="M4,0 L29.833374,0 L29.833374,0 L29.833374,11.0303955 C29.833374,13.2395345 31.624235,15.0303955 33.833374,15.0303955 L45,15.0303955 L45,15.0303955 L45,50 C45,52.209139 43.209139,54 41,54 L4,54 C1.790861,54 2.705415e-16,52.209139 0,50 L0,4 C-1.15871992e-15,1.790861 1.790861,4.05812251e-16 4,0 Z" id="Rectangle"></path>
+                        <path d="M29.6594587,0 L45.3291016,15.75 L32.3290058,15.75 C30.6721515,15.75 29.3290058,14.4068542 29.3290058,12.75 C29.3290058,12.7240081 29.3293435,12.6980173 29.330019,12.6720342 L29.6594587,0 L29.6594587,0 Z" id="Rectangle" fill="#FFD450"></path>
+                        <line x1="9.31201172" y1="18.3218994" x2="15.6489258" y2="18.3218994" id="Path-6" stroke-linecap="round"></line>
+                        <line x1="9.31201172" y1="27.3218994" x2="29.8125" y2="27.5625" id="Path-6-Copy" stroke-linecap="round"></line>
+                        <line x1="9.31201172" y1="34.0718994" x2="29.8125" y2="34.3125" id="Path-6-Copy-2" stroke-linecap="round"></line>
+                        <line x1="9.31201172" y1="43.0718994" x2="29.8125" y2="43.3125" id="Path-6-Copy-3" stroke-linecap="round"></line>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="25px" height="25px" viewBox="0 0 25 25" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>D0A8B9C6-FD73-4329-B691-F0AAB7D942D5</title>
+    <defs>
+        <polygon id="path-1" points="3.25 6.15116279 0.825581395 3.72674419 0 4.54651163 3.25 7.79651163 10.2267442 0.819767442 9.40697674 0"></polygon>
+        <rect id="path-3" x="0" y="0" width="29.0697674" height="29.0697674"></rect>
+    </defs>
+    <g id="Apply" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Full-Application-Form---CV-Uploaded" transform="translate(-305.000000, -787.000000)">
+            <g id="Group-3" transform="translate(59.000000, 753.000000)">
+                <g id="Group-5-Copy-2" transform="translate(246.000000, 34.000000)">
+                    <circle id="Oval" fill="#FFD450" cx="12.5" cy="12.5" r="12.5"></circle>
+                    <g id="ic_check" transform="translate(7.505814, 9.063953)">
+                        <mask id="mask-2" fill="white">
+                            <use xlink:href="#path-1"></use>
+                        </mask>
+                        <g id="Mask"></g>
+                        <g id="Group" mask="url(#mask-2)">
+                            <g transform="translate(-9.540698, -10.808140)" id="🎨-Color">
+                                <mask id="mask-4" fill="white">
+                                    <use xlink:href="#path-3"></use>
+                                </mask>
+                                <use id="Black" fill="#000000" xlink:href="#path-3"></use>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

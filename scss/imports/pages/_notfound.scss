@@ -1,0 +1,20 @@
+.notfound {
+    height: 100vh;
+    background: $main-cl;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .container {
+        text-align: center;
+        .heading.--h4 {
+            margin: 0 0 40px 0;
+        }
+    }
+    @include xs {
+        .container {
+            .heading.--h4 {
+                margin: 0 0 30px 0;
+            }
+        }
+    }
+}

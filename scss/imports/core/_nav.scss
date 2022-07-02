@@ -1,0 +1,64 @@
+.nav {
+    @include size(100%);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    opacity: 0;
+    pointer-events: none;
+    @include transition($t);
+    .container-fluid {
+        height: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 80px;
+        align-items: center;
+        padding-top: var(--height-header);
+        .menu {
+            li {
+                display: block;
+                a {
+                    display: table;
+                    margin-bottom: 0;
+                    padding: 6px 0;
+                    mix-blend-mode: difference;
+                }
+            }
+        }
+    }
+    @include lg {
+        .container-fluid {
+            .menu {
+                li {
+                    a {
+                        font-size: var(--h2-fs);
+                        line-height: var(--h2-lh);
+                        letter-spacing: var(--h2-ls);
+                    }
+                }
+            }
+        }
+        @include maxH(740px) {
+            .container-fluid {
+                .menu {
+                    li {
+                        a {
+                            padding: 4px 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @include md {
+        .container-fluid {
+            grid-template-columns: 1fr;
+            gap: 40px;
+        }
+    }
+    @include xs {
+        .container-fluid {
+            gap: 20px;
+        }
+    }
+}

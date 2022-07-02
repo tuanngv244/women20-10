@@ -1,0 +1,399 @@
+.careerdetailpage {
+    .header {
+        &__right {
+            .btnmain {
+                opacity: 0;
+                pointer-events: none;
+            }
+        }
+    }
+}
+.careerdt {
+    height: 100vh;
+    overflow: hidden;
+    background: $main-cl;
+    --pd: 60px;
+    --hSideBar: 100vh;
+    &__inner {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        position: relative;
+    }
+    &__progress {
+        width: 5px;
+        height: 0%;
+        background: $second-cl;
+        position: absolute;
+        top: 0;
+        left: calc(50% - 2px);
+        @include transform(translateX(-50%));
+    }
+    &__sidebar {
+        height: var(--hSideBar);
+        position: relative;
+        overflow: hidden;
+        padding-left: calc(((100vw - #{$container-fluid-max-width}) / 2) + 50px);
+        padding-right: var(--pd);
+        background: url(../img/bg-detail.jpg), $main-cl;
+        background-position: bottom right;
+        background-repeat: no-repeat;
+        background-size: contain;
+        &-top {
+            .desc {
+                margin: 15px 0 25px 0;
+            }
+        }
+        &-nav {
+            ul {
+                position: relative;
+                &:after {
+                    content: "";
+                    width: 3px;
+                    height: 203px;
+                    background: $second-cl;
+                    position: absolute;
+                    top: 27px;
+                    left: 21px;
+                }
+                li {
+                    display: flex;
+                    align-items: center;
+                    padding: 10px 0;
+                    position: relative;
+                    &:before {
+                        content: "";
+                        @include size(14px);
+                        background: $second-cl;
+                        border-radius: 50%;
+                        position: absolute;
+                        top: 50%;
+                        @include transform(translateY(-50%));
+                        left: 16px;
+                        z-index: 0;
+                    }
+                    .num {
+                        @include size(44px);
+                        background: $second-cl;
+                        border-radius: 50%;
+                        display: inline-block;
+                        @include mid(true);
+                        color: $main-cl;
+                        font-family: nb;
+                        cursor: pointer;
+                        margin-right: 25px;
+                        opacity: 0;
+                        z-index: 10;
+                        position: relative;
+                    }
+                    .text {
+                        font-size: var(--body24-fs);
+                        line-height: normal;
+                    }
+                    &.active {
+                        .num {
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+            &.--navform {
+                ul {
+                    &:after {
+                        height: 135px;
+                    }
+                }
+            }
+        }
+        &-controls {
+            position: absolute;
+            right: var(--pd);
+            top: 500px;
+            z-index: 10;
+            .inner {
+                display: flex;
+                gap: 15px;
+            }
+        }
+    }
+    &__content {
+        background: $white100-cl;
+        height: 100vh;
+        overflow-y: scroll;
+        padding-right: calc(((100vw - #{$container-fluid-max-width}) / 2) + 50px);
+        padding-left: var(--pd);
+        padding-bottom: 30px;
+        @include customscroll();
+        &-row {
+            padding-bottom: 50px;
+        }
+        .form {
+            .careerdt__content-row {
+                padding-bottom: 60px;
+                .heading {
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 10px;
+                    .num {
+                        @include size(44px);
+                        font-size: var(--body18-fs);
+                        line-height: var(--body18-lh);
+                        background: $main-cl;
+                        border-radius: 50%;
+                        display: inline-block;
+                        @include mid(true);
+                        color: $second-cl;
+                        font-family: nb;
+                        cursor: pointer;
+                        margin-right: 20px;
+                        z-index: 10;
+                        position: relative;
+                        flex-shrink: 0;
+                    }
+                }
+                &:first-child {
+                    .form__group {
+                        display: grid;
+                        grid-template-columns: repeat(2, 1fr);
+                        gap: 10px var(--gap);
+                        .field {
+                            &:first-child {
+                                grid-column: 1/3;
+                            }
+                        }
+                    }
+                }
+                .upload {
+                    border: 2px dashed $blue-cl;
+                    padding: 30px;
+                    text-align: center;
+                    margin-top: 30px;
+                    position: relative;
+                    .doc {
+                        margin: 0 auto;
+                        border-radius: 0;
+                    }
+                    .note {
+                        margin: 12px 0 24px 0;
+                    }
+                    .formerror {
+                        width: 100%;
+                        left: 50%;
+                        @include transform(translateX(-50%));
+                    }
+                    .btnupload {
+                        position: relative;
+                        input {
+                            @include size(100%);
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            opacity: 0;
+                        }
+                    }
+                }
+                .uploaded {
+                    margin-top: 30px;
+                    background-color: #eff4fd;
+                    width: max-content;
+                    display: flex;
+                    align-content: center;
+                    align-items: center;
+                    img {
+                        margin: 20px;
+                        border-radius: 0;
+                    }
+                    .text {
+                        min-width: 120px;
+                    }
+                }
+                .hidden {
+                    display: none;
+                }
+                .g-recaptcha {
+                    margin-top: 45px;
+                }
+                .btnsubmit {
+                    margin-top: 60px;
+                }
+            }
+            &.--hide {
+                display: none;
+            }
+        }
+        .formloader {
+            width: 50%;
+            @include size(100%);
+            top: 0;
+            left: 0;
+            position: fixed;
+            z-index: 20;
+            background: rgba(255, 255, 255, 0.9);
+            opacity: 1;
+            pointer-events: auto;
+            @include mid(true);
+            @include transition($t);
+            img {
+                width: 30px;
+            }
+            &.--hide {
+                opacity: 0;
+                pointer-events: none;
+            }
+        }
+        .formsuccess {
+            display: block;
+            &.--hide {
+                display: none;
+            }
+        }
+    }
+    @include maxW($container-fluid-max-width) {
+        &__sidebar {
+            padding-left: 50px;
+        }
+        &__content {
+            padding-right: 50px;
+        }
+    }
+    @include md {
+        --hSideBar: 420px;
+        &__inner {
+            grid-template-columns: 1fr;
+        }
+        &__progress {
+            top: var(--hSideBar);
+            left: 0;
+            @include transform(translateX(0));
+        }
+        &__sidebar {
+            width: 100%;
+            padding-left: var(--gap);
+            padding-right: var(--gap);
+            position: fixed;
+            top: 0;
+            background: $main-cl;
+            &-controls {
+                width: 100%;
+                top: initial;
+                bottom: 30px;
+                left: 0;
+                padding: 0 var(--gap);
+                .inner {
+                    width: 100%;
+                    justify-content: space-between;
+                }
+            }
+            &-nav {
+                position: fixed;
+                top: calc(var(--hSideBar) + 60px);
+                ul {
+                    li {
+                        .text {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+        &__content {
+            height: calc(100vh - var(--hSideBar));
+            padding-right: var(--gap);
+            padding-left: 120px;
+            margin-top: var(--hSideBar);
+            &.--pthead {
+                padding-top: 80px;
+            }
+        }
+        @include maxH(800px) {
+            --hSideBar: 400px;
+        }
+    }
+    @include sm {
+        --hSideBar: 400px;
+        &__progress {
+            display: none;
+        }
+        &__sidebar {
+            &-nav {
+                top: calc(var(--hSideBar) + 45px);
+            }
+        }
+        &__content {
+            &.--pthead {
+                padding-top: 60px;
+            }
+        }
+    }
+    @include xs {
+        --hSideBar: 280px;
+        &__sidebar {
+            height: auto;
+            min-height: var(--hSideBar);
+            &.--pthead{
+                padding-top: calc(var(--height-header));
+            }
+            &-top {
+                .desc {
+                    margin: 3px 0 8px 0;
+                }
+            }
+            &-controls {
+                bottom: 15px;
+            }
+            &-nav {
+                top: calc(var(--hSideBar) + 15px);
+                ul {
+                    &:after {
+                        height: 178px;
+                        top: 28px;
+                        left: 17px;
+                    }
+                    li {
+                        &:before {
+                            @include size(9px);
+                            left: 14px;
+                        }
+                        .num {
+                            @include size(38px);
+                        }
+                    }
+                }
+                &.--navform {
+                    ul {
+                        &:after {
+                            height: 118px;
+                        }
+                    }
+                }
+            }
+        }
+        &__content {
+            padding-left: 80px;
+            &.--pthead {
+                padding-top: 30px;
+            }
+            .form {
+                .careerdt__content-row {
+                    .heading {
+                        margin-bottom: 0;
+                        .num {
+                            @include size(38px);
+                            margin-right: 15px;
+                        }
+                    }
+                    &:first-child {
+                        .form__group {
+                            grid-template-columns: 1fr;
+                            gap: 10px 0;
+                            .field {
+                                &:first-child {
+                                    grid-column: initial;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
